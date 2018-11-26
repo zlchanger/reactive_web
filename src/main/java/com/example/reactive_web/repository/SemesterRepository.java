@@ -1,4 +1,4 @@
-package com.example.reactive_web.service;
+package com.example.reactive_web.repository;
 
 import com.example.reactive_web.model.Semester;
 import org.reactivestreams.Publisher;

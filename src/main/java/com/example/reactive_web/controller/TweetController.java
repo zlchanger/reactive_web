@@ -1,6 +1,6 @@
 package com.example.reactive_web.controller;
 
-import com.example.reactive_web.service.TweetRepository;
+import com.example.reactive_web.repository.TweetRepository;
 import com.example.reactive_web.model.Tweet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

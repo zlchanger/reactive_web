@@ -1,7 +1,7 @@
 package com.example.reactive_web.handler;
 
 import com.example.reactive_web.model.Tweet;
-import com.example.reactive_web.service.TweetRepository;
+import com.example.reactive_web.repository.TweetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;

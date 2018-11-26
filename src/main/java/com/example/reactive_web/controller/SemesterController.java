@@ -1,7 +1,7 @@
 package com.example.reactive_web.controller;
 
 import com.example.reactive_web.model.Semester;
-import com.example.reactive_web.service.SemesterRepository;
+import com.example.reactive_web.repository.SemesterRepository;
 import org.reactivestreams.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

@@ -36,9 +36,9 @@ public class AuthenticationManager implements ReactiveAuthenticationManager {
         if (username != null && jwtUtil.validateToken(authToken)) {
             Claims claims = jwtUtil.getAllClaimsFromToken(authToken);
             List<String> rolesMap = claims.get("role", List.class);
-            List<Role> roles = new ArrayList<>();
+            List<Resource> roles = new ArrayList<>();
             for (String rolemap : rolesMap) {
-                roles.add(Role.valueOf(rolemap));
+                roles.add(Resource.valueOf(rolemap));
             }
             UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(
                     username,

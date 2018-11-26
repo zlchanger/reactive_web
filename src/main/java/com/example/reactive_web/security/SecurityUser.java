@@ -21,6 +21,8 @@ import java.util.stream.Collectors;
 @ToString
 public class SecurityUser implements UserDetails {
 
+    private String Id;
+
     private String username;
 
     private String password;
@@ -30,7 +32,15 @@ public class SecurityUser implements UserDetails {
     private Boolean enabled;
 
     @Getter @Setter
-    private List<Role> roles;
+    private List<Resource> resources;
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
 
     @Override
     public String getUsername() {
@@ -63,7 +73,7 @@ public class SecurityUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.roles.stream().map(authority -> new SimpleGrantedAuthority(authority.name())).collect(Collectors.toList());
+        return this.resources.stream().map(authority -> new SimpleGrantedAuthority(authority.name())).collect(Collectors.toList());
     }
 
     @JsonIgnore

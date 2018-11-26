@@ -46,7 +46,7 @@ public class JWTUtil implements Serializable {
 
     public String generateToken(SecurityUser user) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("role", user.getRoles());
+        claims.put("role", user.getResources());
         claims.put("enable", user.getEnabled());
         return doGenerateToken(claims, user.getUsername());
     }

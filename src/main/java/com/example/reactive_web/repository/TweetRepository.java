@@ -1,4 +1,4 @@
-package com.example.reactive_web.service;
+package com.example.reactive_web.repository;
 
 import com.example.reactive_web.model.Tweet;
 import org.springframework.data.domain.Pageable;
