@@ -3,20 +3,23 @@ package com.example.reactive_web.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * @Auther: changzhaoliang
- * @Date: 2018/11/26 18:00
+ * @Date: 2018/11/27 13:07
  * @Description:
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "user")
-public class User extends BaseEntity{
+@Document(collection = "roleResource")
+public class RoleResource{
 
-    private String admin;
-    private String password;
-    
+    @Id
+    private String id;
+
+    private String roleId;
+    private String resourceId;
 }

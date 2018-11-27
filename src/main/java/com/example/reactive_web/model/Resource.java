@@ -5,18 +5,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * @Auther: changzhaoliang
- * @Date: 2018/11/26 18:00
+ * @Date: 2018/11/27 11:27
  * @Description:
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "user")
-public class User extends BaseEntity{
+@Document(collection = "resource")
+public class Resource extends BaseEntity{
 
-    private String admin;
-    private String password;
-    
+    @NotNull
+    private String url;
+    private String permission;
+    private String name;
+
 }

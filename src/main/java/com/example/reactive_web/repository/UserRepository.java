@@ -1,6 +1,5 @@
 package com.example.reactive_web.repository;
 
-import com.example.reactive_web.model.Tweet;
 import com.example.reactive_web.model.User;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;

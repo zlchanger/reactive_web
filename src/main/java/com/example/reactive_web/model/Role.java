@@ -7,16 +7,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * @Auther: changzhaoliang
- * @Date: 2018/11/26 18:00
+ * @Date: 2018/11/27 10:58
  * @Description:
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "user")
-public class User extends BaseEntity{
+@NoArgsConstructor
+@Document(collection = "role")
+public class Role extends BaseEntity{
 
-    private String admin;
-    private String password;
-    
+    private String name;
+    private String code;
 }
